@@ -88,6 +88,17 @@ main {
   font-size: 30px;
 }
 
+.weather-forecast-date {
+  text-align: center;
+}
+
+.weather-forecast-icon {
+}
+
+.weather-forecast-temp {
+  text-align: center;
+}
+
 footer {
   border-top: 1px solid rgb(241, 220, 231);
   margin-top: 15px;
