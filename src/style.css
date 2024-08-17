@@ -87,16 +87,18 @@ main {
   margin-top: 15px;
   font-size: 30px;
 }
-
-.weather-forecast-date {
+.weather-forecast-day {
   text-align: center;
+  line-height: 500px;
+  margin-bottom: 150px;
+}
+.weather-forecast-date {
 }
 
 .weather-forecast-icon {
 }
 
 .weather-forecast-temp {
-  text-align: center;
 }
 
 footer {
