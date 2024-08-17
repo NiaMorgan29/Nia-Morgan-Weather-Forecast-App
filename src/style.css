@@ -87,15 +87,19 @@ main {
   margin-top: 15px;
   font-size: 30px;
 }
-.weather-forecast-day {
-  text-align: center;
-  line-height: 500px;
-  margin-bottom: 150px;
-}
+
 .weather-forecast-date {
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .weather-forecast-icon {
+  font-size: 38px;
+}
+
+.weather-forecast-temperatures {
 }
 
 .weather-forecast-temp {
