@@ -52,7 +52,42 @@ function handleSearchSubmit(event) {
   searchCity(searchFormInput.value);
 }
 
+function getForecast(city) {
+  let apiKey = "bc71af9e0b8fdta73d8ebob24352d13f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+}
+
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">☀️</div>
+      <div class="weather-forecast-temp">
+      <div class="weather-forecast-temp-high"><strong>91°</strong></div>
+      <div class="weather-forecast-temp-min">80°</div>
+                </div>
+            </div>
+  `;
+  });
+
+  let forecastVariable = document.querySelector("#forecast");
+  forecastVariable.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Curacao");
+displayForecast();
