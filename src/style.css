@@ -92,7 +92,6 @@ main {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 100px;
 }
 
 .weather-forecast-date {
@@ -106,8 +105,6 @@ main {
 
 .weather-forecast-icon {
   font-size: 38px;
-  width: 88px;
-  height: 88px;
   display: block;
   margin: 0 auto;
 }
