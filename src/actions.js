@@ -16,6 +16,8 @@ function updateWeather(response) {
   descriptionVariable.innerHTML = response.data.condition.description;
   humidityVariable.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedVariable.innerHTML = `${response.data.wind.speed}km/h`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -56,14 +58,11 @@ function getForecast(city) {
   let apiKey = "bc71af9e0b8fdta73d8ebob24352d13f";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
-  console.log(apiUrl);
 }
 
 function displayForecast(response) {
   console.log(response.data);
-}
 
-function displayForecast() {
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
@@ -90,4 +89,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Curacao");
-displayForecast();
